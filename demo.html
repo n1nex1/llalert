@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>llalert</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<style>
+		button { width: 100%; height: 40px; margin: 10px 0; font-size: 14px; background: #f1f1f1; border: 2px solid #ccc; border-radius: 5px;}
+	</style>
+	<script src="lib/jquery.js"></script>
+	<script src="src/llalert.js"></script>
+</head>
+<body>
+<button onclick="demo1();">单按钮</button>
+<button onclick="demo2();">按钮回调</button>
+<button onclick="demo3();">回调不关闭弹框</button>
+<script>
+	function demo1() {
+		new llalert({
+			content: '单按钮弹框，ok或者no的text传空字符串',
+			button: {
+				ok: {
+				},
+				no: {
+					text: ''
+				}
+			}
+		});
+	}
+	function demo2() {
+		new llalert({
+			content: '回调',
+			button: {
+				ok: {
+					color: 'red',
+					callback: function() {
+						alert('ok');
+						return false;
+					}
+				},
+				no: {
+					text: '算了',
+					callback: function() {
+						alert('no');
+					}
+				}
+			}
+		});
+	}
+	function demo3() {
+		new llalert({
+			content: '回调不关闭弹框',
+			button: {
+				ok: {
+					color: 'red',
+					callback: function() {
+						alert('ok');
+						return false;
+					}
+				},
+				no: {
+					text: '算了',
+					callback: function() {
+						alert('no');
+					}
+				}
+			}
+		});
+	}
+
+</script>
+</body>
+</html>
