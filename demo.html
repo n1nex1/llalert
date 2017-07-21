@@ -12,7 +12,7 @@
 <body>
 <button onclick="demo1();">单按钮</button>
 <button onclick="demo2();">按钮回调</button>
-<button onclick="demo3();">回调不关闭弹框</button>
+<button onclick="demo3();">OK按钮阻止关闭</button>
 <script>
 	function demo1() {
 		new llalert({
@@ -48,7 +48,7 @@
 	}
 	function demo3() {
 		new llalert({
-			content: '回调不关闭弹框',
+			content: 'OK按钮阻止关闭',
 			button: {
 				ok: {
 					color: 'red',
