@@ -2,7 +2,7 @@
   "name": "llalert",
   "version": "0.1.0",
   "description": "",
-  
+  "main": "dist/llalert.js", 
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-requirejs": "~0.4.1",
